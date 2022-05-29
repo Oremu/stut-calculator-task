@@ -1,0 +1,70 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+ .main-container {
+     display: grid;
+     justify-content: center;
+     align-content: center;
+     min-height: 100vh;
+     grid-template-columns: repeat(4, 100px);
+     grid-template-rows: minmax(120px, auto), repeat(4, 100px);
+ }
+
+ .main-container > button {
+     cursor: pointer;
+     font-size: 2rem;
+     border: 1px solid whitesmoke;
+     outline: none;
+     background-color: aliceblue;
+     padding: 1em;
+ }
+
+ .main-container > button:hover {
+     background-color: aqua;
+ }
+
+.triple-span {
+    grid-column: span 3;
+}
+
+.span-two {
+    width: 200px;
+}
+
+.output {
+    grid-column: 1 /-1;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    height:  100px;
+    padding: 10px;
+    word-wrap: break-word;
+    word-wrap: break-all;
+    border-radius: .1em;
+}
+
+.output, .previous-operand {
+    color: blue;
+    font-size: 1.5rem;
+}
+
+.output, .new-operand {
+    color: red;
+    font-size: 2.5rem;
+}
+
+button {
+    border: 3em;
+    border-radius: .1em;
+}
+
